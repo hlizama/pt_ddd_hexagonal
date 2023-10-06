@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "d1daba9c-63ba-45b4-80c1-f3b246c65546",
+		"name": "proyHexagonalDDD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8457280"
+	},
+	"item": [
+		{
+			"name": "allUsuarios",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/jobs/api/users/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"jobs",
+						"api",
+						"users",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traeUsuarioixId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpc2lsIiwiaWF0IjoxNjA0MzQwMzkxLCJleHAiOjE2MDQzNTgzOTF9.KcU2y3V6LOjfLX5uZBVBO7LyHVRKFYQ8OwetQuScM8I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/jobs/api/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"jobs",
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveUsuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomusuario\": \"Danny\",\r\n    \"email\": \"dany@hhas.com\",\r\n    \"password\": \"sdasdsadf\",\r\n    \"direccion\": \"calle 2f\",\r\n    \"telefono\": 364453,\r\n    \"empresa\": \"j&r\",\r\n    \"ruc\": 2050453035,\r\n    \"tipo\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/jobs/api/users/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"jobs",
+						"api",
+						"users",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUsuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/jobs/api/users/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"jobs",
+						"api",
+						"users",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/jobs/api/accounts/save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account_number\": 424234,\r\n    \"type\": \"Cuenta Corriente\",\r\n    \"initial_balance\": 2000,\r\n    \"iduser\": 3,\r\n    \"state\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/jobs/api/accounts/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"jobs",
+						"api",
+						"accounts",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/jobs/api/accounts/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/jobs/api/accounts/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"jobs",
+						"api",
+						"accounts",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/jobs/api/transactions/save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"06-10-2023\",\r\n    \"idaccount\": 3,\r\n    \"state\": true,\r\n    \"transaction\": 600,\r\n    \"balance\": 2600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/jobs/api/transactions/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"jobs",
+						"api",
+						"transactions",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/jobs/api/transactions/all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"06-10-2023\",\r\n    \"idaccount\": 3,\r\n    \"state\": true,\r\n    \"transaction\": 600,\r\n    \"balance\": 2600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/jobs/api/transactions/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"jobs",
+						"api",
+						"transactions",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
